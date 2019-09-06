@@ -31,7 +31,10 @@ class AutorController extends Controller
         $autor = new Autor();
         $autor->fill($dados);
         $autor->save();
-        return $autor;
+        
+        $lista = Autor::all();
+        
+        return $lista;  
     }
 
     /**
